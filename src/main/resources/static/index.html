@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Traffic Lights Simulator</title>
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/main.css" rel="stylesheet">
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+    <script src="/traffic-light.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4">Traffic Lights Simulator App</h1>
+            <p class="lead">This is a simple app that simulates a traffic light sequence. Please press the button below to start/stop the
+                traffic lights</p>
+            <a id="button" class="btn btn-primary btn-lg" onclick="toggleTrafficLights()" role="button">Start Light Sequence
+            </a>
+        </div>
+
+        <div class="row">
+            <h3>Events:</h3>
+            <div class="col-md-6">
+                <table id="traffic-light-events" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th width="30%">Event Type</th>
+                            <th width="30%">Switch To Colour</th>
+                            <th width="40%">Time</th>
+                        </tr>
+                    </thead>
+                    <tbody id="updates">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-6">
+                <div class="lights-container">
+                    <div class="light-box">
+                        <div id="redLight" class="light red"></div>
+                        <div id="yellowLight" class="light yellow"></div>
+                        <div id="greenLight" class="light green"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

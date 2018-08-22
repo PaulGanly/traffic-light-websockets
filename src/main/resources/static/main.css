@@ -1,0 +1,46 @@
+.lights-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.light-box {
+  background-color: #2f4f4f;
+  width: 150px;
+  height: 440px;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
+.light {
+  border: 1px solid black;
+  border-radius: 60px;
+  height: 120px;
+  margin: 15px;
+  width: 120px;
+}
+
+.red {
+  background-color: #a30303;
+}
+.red.lit {
+  background-color: red;
+  box-shadow: 0 0 30px red;
+}
+
+.yellow {
+  background-color: #a5a503;
+}
+.yellow.lit {
+  background-color: yellow;
+  box-shadow: 0 0 30px yellow;
+}
+
+.green {
+  background-color: green;
+}
+.green.lit {
+  background-color: #04d904;
+  box-shadow: 0 0 30px #04d904;
+}
